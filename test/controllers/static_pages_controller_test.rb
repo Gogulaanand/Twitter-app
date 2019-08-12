@@ -19,4 +19,9 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "About | Twitter App"
   end
 
+  test "should get contacts" do
+    get static_pages_contacts_url
+    assert_response :success
+    assert_select "title", "Contacts | Twitter App"
+  end
 end
